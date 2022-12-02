@@ -1,6 +1,6 @@
 const {readFile} = require("../utils.js");
 
-const main = () => {
+const part1 = () => {
 	const fileName = "./input.txt";
 	const rawData = readFile(fileName);
 	const strategyGuide = rawData.map(strat => {
@@ -51,4 +51,4 @@ const play = (moves) => {
 	return totalScore;
 };
 
-main();
+part1();
