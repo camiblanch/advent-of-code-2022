@@ -1,26 +1,27 @@
 const {readFile} = require("../utils.js");
 
-const main = () => {
+const main = (numUnique = 4) => {
 	const fileName = "./input.txt";
 	const rawData = readFile(fileName)[0].split("");
 
-	let uniqueFour = [];
+	let uniqueCharacters = [];
 	for (let i = 0; i < rawData.length; i++) {
 		const ch = rawData[i];
 
-		const indexOfSameChar = uniqueFour.indexOf(ch);
-		uniqueFour.push(ch);
+		const indexOfSameChar = uniqueCharacters.indexOf(ch);
+		uniqueCharacters.push(ch);
 		if (indexOfSameChar >= 0) {
-			uniqueFour = uniqueFour.slice(indexOfSameChar + 1);
+			uniqueCharacters = uniqueCharacters.slice(indexOfSameChar + 1);
 		} else {
-			if (uniqueFour.length === 4) {
+			if (uniqueCharacters.length === numUnique) {
 				console.log(i + 1);
 				break;
 			}
 		}
 	}
 
-	console.log(uniqueFour);
+	console.log(uniqueCharacters);
 };
 
-main();
+// main();
+main(14);
