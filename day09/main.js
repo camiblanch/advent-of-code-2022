@@ -31,11 +31,11 @@ class Rope {
 
 	headAndTailAreCloseEnough = () => {
 		return this.head.y === this.tail.y && Math.abs(this.head.x - this.tail.x) === 1 || this.head.x === this.tail.x && Math.abs(this.head.y - this.tail.y) === 1 || this.head.y - this.tail.y === this.head.x - this.tail.x || this.head.y - this.tail.y === this.tail.x - this.head.x;
-	}
+	};
 
 	getCopyOfLastHeadPosition = () => {
 		return new Position(this.head.x, this.head.y);
-	}
+	};
 
 	moveUp = () => {
 		const lastHeadPosition = this.getCopyOfLastHeadPosition();
