@@ -4,9 +4,6 @@ const main = () => {
 	const fileName = "./input.txt";
 	const rawData = readFile(fileName);
 
-	// 20 60 100 140 180 220
-	// sum signal strengths at those numOfCycles
-
 	const cyclesToCheck = [20, 60, 100, 140, 180, 220];
 	let numOfCycles = 0;
 	let x = 1;
